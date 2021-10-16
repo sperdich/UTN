@@ -1,15 +1,16 @@
 pipeline {
   agent any
+  
+  tools {
+    gradle 'Gradle'
+  }
   stages {
     stage('Build') {
       steps {
         sh 'git pull https://github.com/sperdich/UTN.git'
         sh 'chmod +x gradlew'
-        withGradle() {
-          sh './gradlew init'
-          sh './gradlew build'
-        }
-
+        sh './gradlew init'
+        sh './gradlew build'
       }
     }
     stage('Test') {}
