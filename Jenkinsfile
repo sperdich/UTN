@@ -5,7 +5,7 @@ pipeline {
       steps {
         sh 'git pull https://github.com/sperdich/UTN.git'
         withGradle() {
-          sh './gradlew build'
+          sh './gradlew -v'
         }
 
       }
