@@ -12,6 +12,8 @@ pipeline {
 
       }
     }
-
+    stage('Test') {}
+    stage('Validate') {}
+    stage('Deploy') {}
   }
 }
