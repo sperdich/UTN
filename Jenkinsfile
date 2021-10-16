@@ -6,7 +6,8 @@ pipeline {
         sh 'git pull https://github.com/sperdich/UTN.git'
         sh 'chmod +x gradlew'
         withGradle() {
-          sh './gradlew -v'
+          sh './gradlew init'
+          sh './gradlew build'
         }
 
       }
